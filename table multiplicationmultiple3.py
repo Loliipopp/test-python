@@ -21,6 +21,7 @@ def table_conversion_euro_dollar():
         print(eu,"euro(s) =",do,"dollar(s)")
         eu=eu*2
         do=do*2
+        return(tristan)
 def suite_triple(chiffre):
     i=1
     while i < 12:
