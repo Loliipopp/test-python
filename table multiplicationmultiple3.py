@@ -1,4 +1,4 @@
-# J'ai ajouté ce commentaire -- Léa
+# J'ai ajouté ce commentaire -- Monstre
 # Bergers allemands sont coools comme les chocolatines de Bordeaux! <3333
 
 
@@ -18,13 +18,14 @@ def table_conversion_euro_dollar():
     eu=1
     do=1.65
     while eu < 16384:
-        print(eu,"euro(s) =",do,"dollar(s)")
+        print(euro,"euro(s) =",do,"dollar(s)")
         eu=eu*2
-        do=do*2
+        do=do*2q
         return(tristan)
+
 def suite_triple(chiffre):
     i=1
     while i < 12:
         print(chiffre)
-        chiffre=chiffre*3
+        chif=chiffre*3
         i=i+1
