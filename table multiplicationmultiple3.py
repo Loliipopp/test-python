@@ -1,5 +1,6 @@
 # J'ai ajouté ce commentaire -- Léa
-# Bergers allemands
+# Bergers allemands sont coools comme les chocolatines de Bordeaux! <3333
+
 
 def table_de(chiffre,multiple):
     res=0
