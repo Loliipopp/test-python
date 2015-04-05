@@ -1,4 +1,4 @@
-# J'ai ajouté ce commentaire -- Tristan
+# J'ai ajouté ce commentaire -- Léa
 # Bergers allemands
 
 def table_de(chiffre,multiple):
@@ -10,7 +10,9 @@ def table_de(chiffre,multiple):
         if (res%multiple) == 0:
             print(res,"*")
         else:
-            print(res)        
+            print(res)
+            tristan=poche
+            lea=chocolatine
 def table_conversion_euro_dollar():
     eu=1
     do=1.65
