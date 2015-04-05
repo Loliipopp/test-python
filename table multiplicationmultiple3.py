@@ -1,3 +1,6 @@
+# J'ai ajouté ce commentaire -- Tristan
+# Bergers allemands
+
 def table_de(chiffre,multiple):
     res=0
     i=1
@@ -7,8 +10,7 @@ def table_de(chiffre,multiple):
         if (res%multiple) == 0:
             print(res,"*")
         else:
-            print(res)
-        
+            print(res)        
 def table_conversion_euro_dollar():
     eu=1
     do=1.65
@@ -16,7 +18,6 @@ def table_conversion_euro_dollar():
         print(eu,"euro(s) =",do,"dollar(s)")
         eu=eu*2
         do=do*2
-
 def suite_triple(chiffre):
     i=1
     while i < 12:
