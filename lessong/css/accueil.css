@@ -1,0 +1,20 @@
+body {
+	text-align: center;
+	min-width: 600px;
+}
+
+.boite-centrale {
+	width: 700px;
+	display: inline-block;
+	text-align: left;
+	border-radius: 30px;
+	padding: 20px;
+}
+
+button {
+	display: inline-block;
+}
+
+.jumbotron{
+	background-image: url(../images/fond-geom1.jpg);
+}

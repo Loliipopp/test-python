@@ -1,0 +1,39 @@
+body {
+	text-align: center;
+}
+
+.boite-centrale {
+	width: 555px;
+	display: inline-block;
+	text-align: left;
+	border-radius: 30px;
+	padding: 20px;
+}
+
+.boite-commentaires {
+	width: 650px;
+	text-align: left;
+	display: inline-block;
+
+}
+
+.commentaire {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	padding: 3px;
+	background-color: #E1E1E1;
+	border-radius: 5px;
+}
+
+.boite-paroles {
+	background-image: url(../images/border.jpg);
+	margin-top: 10px;
+	padding: 5px;
+}
+
+.paroles {
+	background: white;
+	padding: 20px;
+
+
+}

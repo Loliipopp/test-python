@@ -1,0 +1,7 @@
+<?php
+		$requete2="SELECT * FROM sujet"; 
+		$response2 = $pdo->prepare($requete2);
+		$response2->execute();
+
+		$threads = $response2->fetchAll();
+?>
