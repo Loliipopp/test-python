@@ -1,0 +1,39 @@
+textarea {
+	max-width: 500px;
+	min-width: 500px;
+	max-height: 300px;
+	min-height: 200px;
+}
+
+.boite {
+	background-color: #28C7DE;
+	display: inline-block;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.boite-centrale {
+	width: 555px;
+	display: inline-block;
+	text-align: left;
+	border-radius: 30px;
+	padding: 20px;
+	background-color: white;
+	text-align: left;
+}
+
+.paroles {
+	margin-bottom: 15px;
+}
+
+.genre, .niveau {
+	display: inline-block;
+}
+
+.bouton {
+	text-align: right;
+	margin-top: 5px;
+}
+
+
