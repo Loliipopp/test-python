@@ -1,11 +1,8 @@
     <footer class="footer">
-          <div class="container">
+          <div class="container-pied">
                 <ul class="nav navbar-nav">
-                <li>
-                  <a href="accueil.php"><img src="images/Lessong-petit.png" alt="Logo Lessong" width="94" height="44" ></img></a>
-                </li>
-                <li><a href="#">Contactez Nous</a></li>
-                <li><a href="#">À Propos</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="apropos.php">À Propos</a></li>
                 <ul>
           </div>
     </footer>

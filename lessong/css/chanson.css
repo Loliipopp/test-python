@@ -2,6 +2,26 @@ body {
 	text-align: center;
 }
 
+.col-sm-3 {
+    margin-left: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color:#F5F5F5;
+}
+
+table {
+	background-color: white;
+}
+
+
+tr {
+	text-align: left;
+}
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #639bcb;
+}
+
 .boite-centrale {
 	width: 555px;
 	display: inline-block;
@@ -35,5 +55,13 @@ body {
 	background: white;
 	padding: 20px;
 
+}
 
+.bouton {
+	text-align: right;
+	margin-top: 5px;
+}
+
+.titre {
+	text-align: center;
 }

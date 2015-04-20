@@ -5,6 +5,7 @@
 	require_once("requetes-chanson.php");
 
 	$donnees['menu'] = "Chanson";
+	$donnees['titre'] = "$titre de $interprete";
 
 ?>
 
@@ -41,8 +42,8 @@
 					}
 					echo "<form action='chanson.php' method='get' id='form'><input type='hidden' name='id_chanson' value='".$chansonsMemeNiveau[$i]['id']."'/>
 						<tr>
-						<td><button type='submit'><span class='glyphicon glyphicon-headphones' aria-hidden='true'></span></button></td>
-</td>
+						<td class='icon'><button type='submit'><span class='glyphicon glyphicon-headphones' aria-hidden='true'></span></button></td>
+						</td>
 						<td> <p>".$tit." <strong> de </strong> ".$int." </p></td>
 						</tr>
 						</form>";
@@ -52,7 +53,7 @@
 			</table>
 		</div>
 		<div>
-			<p> Aimez-vous ce genre? Écoutez ses autres chansons:</p>
+			<p> Aimez-vous ce genre? Écoutez ces autres chansons:</p>
 			<table class='table table-condensed table-hover table-striped table-bordered'>
 				<?php
 
@@ -76,14 +77,16 @@
 
 					echo "<form action='chanson.php' method='get' id='form'><input type='hidden' name='id_chanson' value='".$chansonsMemeGenre[$i]['id']."'/>
 						<tr>
-						<td><button type='submit'><span class='glyphicon glyphicon-headphones' aria-hidden='true'></span></button></td>
+						<td class='icon'><button type='submit'><span class='glyphicon glyphicon-headphones' aria-hidden='true'></span></button></td>
 						<td> <p>".$tit1." <strong> de </strong>".$int1." </p></td>
 						</tr>
 						</form>";
 				}
 				?>
 			</table>
+
 		</div>
+		<?php echo "<img src='images/fille.jpg' height='200px' width='200px'>"; ?>
     </div><!-- sidebar -->
     <div class="col-sm-8">
 
@@ -93,13 +96,14 @@
 		</div>
 	    	<div>
 			<?php
-				echo "<p> <strong>".$titre."</strong> de ".$interprete."</p>";
+				echo "<p> <strong>\"".$titre."\"</strong> de ".$interprete."</p>";
 				echo "<form method='get' action='accueil.php'>
-				      <input type='hidden' name='champ' value='genre_chanson'><button class='btn btn-primary btn-xs' type='submit' name='genre_chanson' value='".$genre."'> BLUH BLUH</button>
+				      <label for='gen'> Genre: </label><input id='gen' type='hidden' name='champ' value='genre_chanson'>
+				      <button class='btn btn-primary btn-xs' type='submit' name='genre_chanson' value='".$genreChanson[0]['id']."'>".$genreChanson[0]['texte']."</button>
 					  </form>";
-				echo "<p>Catégories:</p><form method='get' action='accueil.php'>";
+				echo "<form method='get' action='accueil.php'><label for='cat'>Catégories: </label>";
 					for ($i=0; $i<count($categories); $i++) {
-					echo "<input type='hidden' name='champ' value='categorie_chanson'><button class='btn btn-primary btn-xs' type='submit' name='categorie_chanson' value='".$categories[$i]['id']."'>".$categories[$i]['texte']."</button>";
+					echo "<input id='cat' type='hidden' name='champ' value='categorie_chanson'><button class='btn btn-primary btn-xs' type='submit' name='categorie_chanson' value='".$categories[$i]['id']."'>".$categories[$i]['texte']."</button>";
 					}
 				echo "</form>";
 				?> 
@@ -111,6 +115,9 @@
 			</div>
 		</div>  <!-- Boite Centrale --> 
 		<div class='boite-commentaires'>
+			<div class='titre'>
+				<h3> Commentaires </h3>
+			</div>
 			<div>
 				<?php 
 					for ($i=0; $i<count($commentaires); $i++) {
@@ -123,9 +130,10 @@
 			</div>
 			<div>
 				<form action='chanson.php' method='post'>
-					<p> Pensez à laisser un commentaire </p>
 					<textarea name='commentaire' class='form-control'> </textarea>
-					<button type='submit' class='btn btn-primary' name='submit' value='commentaire_soumis'></button>
+					<div class='bouton'>
+						<button type='submit' class='btn btn-primary' name='submit' value='commentaire_soumis'> Soumettre le Commentaire</button>
+					</div>
 					<?php echo"<input type='hidden' name='id_chanson' value='".$id_chanson."'>"; ?>
 					<?php echo"<input type='hidden' name='id_membre' value='".$id_membre."'>"; ?>
 				</form>

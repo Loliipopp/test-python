@@ -28,14 +28,33 @@
         break;      
       case 'Soumettre-Chanson':
         echo "<link href='css/soumettre-chanson.css' rel='stylesheet' media='all' type='text/css' media='all' />";
+        break;      
+      case 'Espace-Perso':
+        echo "<link href='css/espace-perso.css' rel='stylesheet' media='all' type='text/css' media='all' />";
+        break;      
+      case 'Index':
+        echo "<link href='css/espace-index.css' rel='stylesheet' media='all' type='text/css' media='all' />";
+        break;      
+      case 'Soumettre-Sujet':
+        echo "<link href='css/soumettre-sujet.css' rel='stylesheet' media='all' type='text/css' media='all' />";
+        break;      
+      case 'A-Propos':
+        echo "<link href='css/apropos.css' rel='stylesheet' media='all' type='text/css' media='all' />";
+        break;      
+      case 'Contact':
+        echo "<link href='css/contact.css' rel='stylesheet' media='all' type='text/css' media='all' />";
+        break;      
+      case 'Sujet':
+        echo "<link href='css/sujet.css' rel='stylesheet' media='all' type='text/css' media='all' />";
         break;
+
       }
     ?>
     <link href="css/style.css" rel="stylesheet" media="all" type="text/css" media="all" />
     <link href="telechargements/awesome-bootstrap-checkbox-master/awesome-bootstrap-checkbox.css" rel="stylesheet" media="all" type="text/css" media="all" />
     <link rel="stylesheet" href="telechargements/awesome-bootstrap-checkbox-master/bower_components/Font-Awesome/css/font-awesome.css"/>
-
-
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
     <script src="js/script.js" type="text/javascript"> </script> 
     <script src="js/sortable.js" type="text/javascript"> </script> 
@@ -52,16 +71,16 @@
             <span class="sr-only">Toggle navigation</span>
           </button>
       
-          <a class="navbar-brand" href="accueil.php"><img src="images/Lessong-petit.png" alt="Logo Lessong" width="94" height="44" ></img></a>
+          <a class="navbar-brand logo" href="accueil.php">Lessong</a>
         </div>
 
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
       			<li <?php if ($donnees['menu']=="Accueil") echo 'class="active"'; ?> >
-      				<a href="accueil.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Accueil</a>
+      				<a href="accueil.php"><span class="glyphicon glyphicon-music" aria-hidden="true"></span> Accueil</a>
       			</li>  
             <li <?php if ($donnees['menu']=="Forum") echo 'class="active"'; ?> >
-              <a href="forum.php"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Forum </a>
+              <a href="forum.php"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Forum </a>
             </li>
     		  </ul>
     		  
@@ -76,4 +95,8 @@
         </div><!--/.navbar -->
       </div>
     </nav>
+    <div class="jumbotron">
+     <div class="container">
+     </div>
+    </div>
     	

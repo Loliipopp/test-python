@@ -29,13 +29,11 @@
 					
 					// Le mot de passe n'est pas juste
 					else  {
-						//echo "<script> alert('Le mot de passe nest pas juste!'); </script>";
 						header('Location: http://localhost:8888/lessong/index.php');   // Diriger l'utilisateur vers la page de connexion
 					}
 				}
 				// Le pseudo n'existe pas
 				else  {
-					//echo "<script> alert('Ce pseudo nexiste pas!'); </script>";
 					header('Location: http://localhost:8888/lessong/index.php');   // Diriger l'utilisateur vers la page de connexion
 				}
 				header('Location: http://localhost:8888/lessong/accueil.php');   // Diriger l'utilisateur vers la page d'accueil
@@ -51,8 +49,7 @@
 
 				// L'utilisateur n'a pas mis le même mot de passe dans chaque champs.  
 				if (!($motdepasse === $confirmmdp)) 
-					echo " <script> alert('Vous navez pas mis le même motdepasse.  Veuillez vérifier votre orthographe!'); </script>";
-
+					header('Location: http://localhost:8888/lessong/index.php');   // Diriger l'utilisateur vers la page de connexion
 				/**
 				 * Si les deux mots de passe sont equivalents et valides,
 				 * verifier que le pseudo n'est pas déjà pris.  
@@ -78,11 +75,10 @@
 
 						header('Location: http://localhost:8888/lessong/accueil.php');   // Diriger l'utilisateur vers la page d'accueil
 					} else 
-						echo " <script> alert('Cet pseudo est déjà pris! Veuillez essayer à nouveau!'); </script>";
+						header('Location: http://localhost:8888/lessong/index.php');   // Diriger l'utilisateur vers la page de connexion
 				}			
 				break;
 			default: 
-				echo "<script> alert('OTHER'); </script>";
 				header('Location: http://localhost:8888/lessong/index.php');   // Diriger l'utilisateur vers la page de connexion
 		}
 	}

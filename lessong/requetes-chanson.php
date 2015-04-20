@@ -29,6 +29,9 @@
 	$paroles = $chanson[0]['paroles'];
 	$lien = $chanson[0]['lien'];
 
+
+
+
 	/**
 	 * Trouver les commentaires liés avec cette chanson
 	 **/
@@ -45,12 +48,17 @@
 	$response2->execute();
 	$pseudo = $response2->fetchAll();
 
+
+
 	$requete3="SELECT texte FROM categorie_chanson WHERE id IN (SELECT id_categorie FROM chanson_par_categorie WHERE id_chanson=$id_chanson)";
 	$response3 = $pdo->prepare($requete3);
 	$response3->execute();
 	$categories = $response3->fetchAll();
 
-
+	$requete3="SELECT * FROM genre_chanson WHERE id=$id_genre";
+	$response3 = $pdo->prepare($requete3);
+	$response3->execute();
+	$genreChanson = $response3->fetchAll();
 
 	/**
 	 * Des autres chansons au même niveau

@@ -5,7 +5,7 @@
 		$titre = $_POST['titre'];
 		$texte = $_POST['texte'];			
 		$categorie = $_POST['categorie']; 
-
+		
 		/* Enregistrer le sujet */
 		$requete3="INSERT INTO sujet (texte, id_membre, id_categorie, date_soumise) VALUES (?, ?, ?, NOW())";
 		$response3=$pdo->prepare($requete3);

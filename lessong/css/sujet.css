@@ -1,0 +1,32 @@
+.bouton {
+	text-align: right;
+	margin-top: 5px;
+}
+
+
+.boite-centrale {
+	width: 700px;
+	display: inline-block;
+	text-align: left;
+	border-radius: 30px;
+	padding: 20px;
+	background-color: white;
+	text-align: left;
+}
+
+.titre {
+	text-align: center;
+}
+
+
+.boite {
+	background-image: url(../images/border.jpg);
+	margin-top: 10px;
+	padding: 5px;
+}
+
+.sujet {
+	background: white;
+	padding: 20px;
+
+}

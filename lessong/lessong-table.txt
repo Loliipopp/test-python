@@ -1,0 +1,396 @@
+-- phpMyAdmin SQL Dump
+-- version 4.2.10
+-- http://www.phpmyadmin.net
+--
+-- Client :  localhost:8889
+-- Généré le :  Dim 19 Avril 2015 à 15:53
+-- Version du serveur :  5.5.38
+-- Version de PHP :  5.6.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Base de données :  `lessong2`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `categorie_chanson`
+--
+
+CREATE TABLE `categorie_chanson` (
+`id` int(11) NOT NULL,
+  `texte` text NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `categorie_chanson`
+--
+
+INSERT INTO `categorie_chanson` (`id`, `texte`) VALUES
+(1, 'Passe-Compose'),
+(2, 'Plus-Que-Parfait'),
+(3, 'Argot'),
+(4, 'Expression-Belge'),
+(5, 'Franglais');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `categorie_forum`
+--
+
+CREATE TABLE `categorie_forum` (
+`id` int(11) NOT NULL,
+  `texte` text NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `categorie_forum`
+--
+
+INSERT INTO `categorie_forum` (`id`, `texte`) VALUES
+(1, 'Grammaire Française'),
+(2, 'Politique Francophone');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `chanson`
+--
+
+CREATE TABLE `chanson` (
+`id` int(11) NOT NULL,
+  `titre` text NOT NULL,
+  `interprete` text NOT NULL,
+  `paroles` text NOT NULL,
+  `id_niveau` int(11) NOT NULL,
+  `id_genre` int(11) NOT NULL,
+  `lien` text NOT NULL,
+  `id_membre` int(11) NOT NULL,
+  `date_soumise` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `chanson`
+--
+
+INSERT INTO `chanson` (`id`, `titre`, `interprete`, `paroles`, `id_niveau`, `id_genre`, `lien`, `id_membre`, `date_soumise`) VALUES
+(7, 'Carmen', 'Stromae', 'L''amour est comme l''oiseau de twitter , on est bleu de lui seulement pour 48h.<br />\r\nD''abord on s’affini ensuite on se follow.<br />\r\nOn en deviens fêler et on fini solo.<br />\r\n<br />\r\nPrend garde à toi.<br />\r\nEt à tous ceux qui vous like.<br />\r\nEt les sourires qui remplacent souvent des coup d''hashtag.<br />\r\nPrend garde à toi.<br />\r\nHaa les amis , les potes ou les followers.<br />\r\nVous faites erreur , vous avez juste la cote.<br />\r\n<br />\r\nPrend garde à toi .<br />\r\nSi tu t''aime garde à moi.<br />\r\nSi je m''aimes garde à nous.<br />\r\nGarde à eux.<br />\r\nGarde à vous.<br />\r\nEt puis chacun pour soi.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\n<br />\r\nL''amour est enfant de la consommation.<br />\r\nIl voudras toujours toujours toujours plus de choix.<br />\r\nMais que vous voulez-vous.<br />\r\nDe sentiments tombé du camion.<br />\r\nL''offre et la demande pour unique et seul loi.<br />\r\nPrend garde à toi.<br />\r\nLes gens connaissent déjà les dangers.<br />\r\nMoi j''ai gardé mon ticket et si il faut je vais l''échanger moi.<br />\r\nPrend garde à toi.<br />\r\nIl si il le faut j''irai me venger moi.<br />\r\nCette oiseau de malheur je le met en cage , je le fais chanter moi.<br />\r\n<br />\r\nPrend garde à toi .<br />\r\nSi tu t''aime garde moi.<br />\r\nSi je m''aimes garde à nous.<br />\r\nGarde à eux.<br />\r\nGarde à vous.<br />\r\nEt puis chacun à pour soi.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\n<br />\r\nUn jour t’achète.<br />\r\nUn jour tu aime.<br />\r\nUn jour tu jette.<br />\r\nMais un jour tu paye.<br />\r\nUn jour tu verras, on s''aimeras, mais avant on crèveras tous comme des raaaaaats.', 4, 2, 'lien', 1, '2015-04-19 00:32:47'),
+(8, 'Mamama', 'mamamamama', 'L''amour est comme l''oiseau de twitter , on est bleu de lui seulement pour 48h.<br />\r\nD''abord on s’affini ensuite on se follow.<br />\r\nOn en deviens fêler et on fini solo.<br />\r\n<br />\r\nPrend garde à toi.<br />\r\nEt à tous ceux qui vous like.<br />\r\nEt les sourires qui remplacent souvent des coup d''hashtag.<br />\r\nPrend garde à toi.<br />\r\nHaa les amis , les potes ou les followers.<br />\r\nVous faites erreur , vous avez juste la cote.<br />\r\n<br />\r\nPrend garde à toi .<br />\r\nSi tu t''aime garde à moi.<br />\r\nSi je m''aimes garde à nous.<br />\r\nGarde à eux.<br />\r\nGarde à vous.<br />\r\nEt puis chacun pour soi.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\n<br />\r\nL''amour est enfant de la consommation.<br />\r\nIl voudras toujours toujours toujours plus de choix.<br />\r\nMais que vous voulez-vous.<br />\r\nDe sentiments tombé du camion.<br />\r\nL''offre et la demande pour unique et seul loi.<br />\r\nPrend garde à toi.<br />\r\nLes gens connaissent déjà les dangers.<br />\r\nMoi j''ai gardé mon ticket et si il faut je vais l''échanger moi.<br />\r\nPrend garde à toi.<br />\r\nIl si il le faut j''irai me venger moi.<br />\r\nCette oiseau de malheur je le met en cage , je le fais chanter moi.<br />\r\n<br />\r\nPrend garde à toi .<br />\r\nSi tu t''aime garde moi.<br />\r\nSi je m''aimes garde à nous.<br />\r\nGarde à eux.<br />\r\nGarde à vous.<br />\r\nEt puis chacun à pour soi.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\n<br />\r\nUn jour t’achète.<br />\r\nUn jour tu aime.<br />\r\nUn jour tu jette.<br />\r\nMais un jour tu paye.<br />\r\nUn jour tu verras, on s''aimeras, mais avant on crèveras tous comme des raaaaaats.', 2, 2, 'asdfasd', 1, '2015-04-19 00:34:45'),
+(9, 'asfdhgfsadfaas', 'asdfas', 'L''amour est comme l''oiseau de twitter , on est bleu de lui seulement pour 48h.<br />\r\nD''abord on s’affini ensuite on se follow.<br />\r\nOn en deviens fêler et on fini solo.<br />\r\n<br />\r\nPrend garde à toi.<br />\r\nEt à tous ceux qui vous like.<br />\r\nEt les sourires qui remplacent souvent des coup d''hashtag.<br />\r\nPrend garde à toi.<br />\r\nHaa les amis , les potes ou les followers.<br />\r\nVous faites erreur , vous avez juste la cote.<br />\r\n<br />\r\nPrend garde à toi .<br />\r\nSi tu t''aime garde à moi.<br />\r\nSi je m''aimes garde à nous.<br />\r\nGarde à eux.<br />\r\nGarde à vous.<br />\r\nEt puis chacun pour soi.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\n<br />\r\nL''amour est enfant de la consommation.<br />\r\nIl voudras toujours toujours toujours plus de choix.<br />\r\nMais que vous voulez-vous.<br />\r\nDe sentiments tombé du camion.<br />\r\nL''offre et la demande pour unique et seul loi.<br />\r\nPrend garde à toi.<br />\r\nLes gens connaissent déjà les dangers.<br />\r\nMoi j''ai gardé mon ticket et si il faut je vais l''échanger moi.<br />\r\nPrend garde à toi.<br />\r\nIl si il le faut j''irai me venger moi.<br />\r\nCette oiseau de malheur je le met en cage , je le fais chanter moi.<br />\r\n<br />\r\nPrend garde à toi .<br />\r\nSi tu t''aime garde moi.<br />\r\nSi je m''aimes garde à nous.<br />\r\nGarde à eux.<br />\r\nGarde à vous.<br />\r\nEt puis chacun à pour soi.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\nEt c''est comme sa qu''on s''aime.<br />\r\nEt c’est comme sa qu''on somme.<br />\r\n<br />\r\nUn jour t’achète.<br />\r\nUn jour tu aime.<br />\r\nUn jour tu jette.<br />\r\nMais un jour tu paye.<br />\r\nUn jour tu verras, on s''aimeras, mais avant on crèveras tous comme des raaaaaats.', 2, 3, 'kuyjthrgdfas', 1, '2015-04-19 00:35:09'),
+(10, 'chansons ', 'Florence et la Machine ', 'Shake it out', 3, 2, 'https://www.youtube.com/embed/F6LLTVR_vx4', 1, '2015-04-19 14:17:35');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `chanson_par_categorie`
+--
+
+CREATE TABLE `chanson_par_categorie` (
+  `id_categorie` int(11) NOT NULL,
+  `id_chanson` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `chanson_par_categorie`
+--
+
+INSERT INTO `chanson_par_categorie` (`id_categorie`, `id_chanson`) VALUES
+(2, 8),
+(3, 8),
+(4, 8),
+(1, 9),
+(3, 9),
+(4, 9),
+(5, 10);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `commentaire_chanson`
+--
+
+CREATE TABLE `commentaire_chanson` (
+`id` int(11) NOT NULL,
+  `texte` text NOT NULL,
+  `id_membre` int(11) NOT NULL,
+  `id_chanson` int(11) NOT NULL,
+  `date_soumise` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `commentaire_chanson`
+--
+
+INSERT INTO `commentaire_chanson` (`id`, `texte`, `id_membre`, `id_chanson`, `date_soumise`) VALUES
+(1, ' fadsf', 1, 7, '2015-04-19 00:41:03'),
+(2, ' fasdf', 1, 7, '2015-04-19 00:41:08'),
+(3, ' fasdfads', 1, 8, '2015-04-19 00:42:00'),
+(4, ' Je ne sais pas si c''est bien! ', 1, 8, '2015-04-19 00:42:08');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `commentaire_forum`
+--
+
+CREATE TABLE `commentaire_forum` (
+`id` int(11) NOT NULL,
+  `texte` text NOT NULL,
+  `id_membre` int(11) NOT NULL,
+  `id_sujet` int(11) NOT NULL,
+  `date_soumise` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `commentaire_forum`
+--
+
+INSERT INTO `commentaire_forum` (`id`, `texte`, `id_membre`, `id_sujet`, `date_soumise`) VALUES
+(1, ' asdfas', 1, 1, '2015-04-19 00:53:03'),
+(2, ' fasdfasd', 1, 1, '2015-04-19 00:53:06'),
+(3, ' fasdfasd', 1, 1, '2015-04-19 00:54:00'),
+(4, ' fad', 1, 1, '2015-04-19 00:54:09'),
+(5, ' L''amour est comme l''oiseau de twitter , on est bleu de lui seulement pour 48h.\r\nD''abord on s’affini ensuite on se follow.\r\nOn en deviens fêler et on fini solo.\r\n\r\nPrend garde à toi.\r\nEt à tous ceux qui vous like.\r\nEt les sourires qui remplacent souvent des coup d''hashtag.\r\nPrend garde à toi.\r\nHaa les amis , les potes ou les followers.\r\nVous faites erreur , vous avez juste la cote.\r\n\r\nPrend garde à toi .\r\nSi tu t''aime garde à moi.\r\nSi je m''aimes garde à nous.\r\nGarde à eux.\r\nGarde à vous.\r\nEt puis chacun pour soi.\r\nEt c''est comme sa qu''on s''aime.\r\nEt c’est comme sa qu''on somme.\r\nEt c''est comme sa qu''on s''aime.\r\nEt c’est comme sa qu''on somme.\r\nEt c''est comme sa qu''on s''aime.\r\nEt c’est comme sa qu''on somme.\r\nEt c''est comme sa qu''on s''aime.\r\nEt c’est comme sa qu''on somme.\r\n\r\nL''amour est enfant de la consommation.\r\nIl voudras toujours toujours toujours plus de choix.\r\nMais que vous voulez-vous.\r\nDe sentiments tombé du camion.\r\nL''offre et la demande pour unique et seul loi.\r\nPrend garde à toi.\r\nLes gens connaissent déjà les dangers.\r\nMoi j''ai gardé mon ticket et si il faut je vais l''échanger moi.\r\nPrend garde à toi.\r\nIl si il le faut j''irai me venger moi.\r\nCette oiseau de malheur je le met en cage , je le fais chanter moi.\r\n\r\nPrend garde à toi .\r\nSi tu t''aime garde moi.\r\nSi je m''aimes garde à nous.\r\nGarde à eux.\r\nGarde à vous.\r\nEt puis chacun à pour soi.\r\nEt c''est comme sa qu''on s''aime.\r\nEt c’est comme sa qu''on somme.\r\nEt c''est comme sa qu''on s''aime.\r\nEt c’est comme sa qu''on somme.\r\nEt c''est comme sa qu''on s''aime.\r\nEt c’est comme sa qu''on somme.\r\nEt c''est comme sa qu''on s''aime.\r\nEt c’est comme sa qu''on somme.\r\n\r\nUn jour t’achète.\r\nUn jour tu aime.\r\nUn jour tu jette.\r\nMais un jour tu paye.\r\nUn jour tu verras, on s''aimeras, mais avant on crèveras tous comme des raaaaaats.', 1, 1, '2015-04-19 00:54:34'),
+(6, ' $nouveau_commentaire<br />\r\n$nouveau_commentaire<br />\r\n$nouveau_commentaire', 1, 1, '2015-04-19 00:56:38');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `genre_chanson`
+--
+
+CREATE TABLE `genre_chanson` (
+`id` int(11) NOT NULL,
+  `texte` text NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `genre_chanson`
+--
+
+INSERT INTO `genre_chanson` (`id`, `texte`) VALUES
+(1, 'Country'),
+(2, 'Rock'),
+(3, 'Disco'),
+(4, 'Classique');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `membre`
+--
+
+CREATE TABLE `membre` (
+`id` int(11) NOT NULL,
+  `pseudo` text NOT NULL,
+  `mot_de_passe` text NOT NULL,
+  `email` text NOT NULL,
+  `date_inscrit` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `membre`
+--
+
+INSERT INTO `membre` (`id`, `pseudo`, `mot_de_passe`, `email`, `date_inscrit`) VALUES
+(1, 'a', 'a', 'a', '2015-04-18 23:54:40');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `niveau_chanson`
+--
+
+CREATE TABLE `niveau_chanson` (
+`id` int(11) NOT NULL,
+  `texte` text NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `niveau_chanson`
+--
+
+INSERT INTO `niveau_chanson` (`id`, `texte`) VALUES
+(1, 'Niveau 1'),
+(2, 'Niveau 2'),
+(3, 'Niveau 3'),
+(4, 'Niveau 4'),
+(5, 'Niveau 5');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `sujet`
+--
+
+CREATE TABLE `sujet` (
+`id` int(11) NOT NULL,
+  `texte` text NOT NULL,
+  `id_membre` int(11) NOT NULL,
+  `id_categorie` int(11) NOT NULL,
+  `date_soumise` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `sujet`
+--
+
+INSERT INTO `sujet` (`id`, `texte`, `id_membre`, `id_categorie`, `date_soumise`) VALUES
+(1, 'Le titre', 1, 1, '2015-04-19 00:52:43');
+
+--
+-- Index pour les tables exportées
+--
+
+--
+-- Index pour la table `categorie_chanson`
+--
+ALTER TABLE `categorie_chanson`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `categorie_forum`
+--
+ALTER TABLE `categorie_forum`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `chanson`
+--
+ALTER TABLE `chanson`
+ ADD PRIMARY KEY (`id`), ADD KEY `id_niveau` (`id_niveau`), ADD KEY `id_genre` (`id_genre`), ADD KEY `id_membre` (`id_membre`);
+
+--
+-- Index pour la table `chanson_par_categorie`
+--
+ALTER TABLE `chanson_par_categorie`
+ ADD PRIMARY KEY (`id_categorie`,`id_chanson`), ADD KEY `id_chanson` (`id_chanson`);
+
+--
+-- Index pour la table `commentaire_chanson`
+--
+ALTER TABLE `commentaire_chanson`
+ ADD PRIMARY KEY (`id`), ADD KEY `id_membre` (`id_membre`), ADD KEY `id_chanson` (`id_chanson`);
+
+--
+-- Index pour la table `commentaire_forum`
+--
+ALTER TABLE `commentaire_forum`
+ ADD PRIMARY KEY (`id`), ADD KEY `id_membre` (`id_membre`), ADD KEY `id_sujet` (`id_sujet`);
+
+--
+-- Index pour la table `genre_chanson`
+--
+ALTER TABLE `genre_chanson`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `membre`
+--
+ALTER TABLE `membre`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `niveau_chanson`
+--
+ALTER TABLE `niveau_chanson`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `sujet`
+--
+ALTER TABLE `sujet`
+ ADD PRIMARY KEY (`id`), ADD KEY `id_membre` (`id_membre`), ADD KEY `id_categorie` (`id_categorie`);
+
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `categorie_chanson`
+--
+ALTER TABLE `categorie_chanson`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT pour la table `categorie_forum`
+--
+ALTER TABLE `categorie_forum`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT pour la table `chanson`
+--
+ALTER TABLE `chanson`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT pour la table `commentaire_chanson`
+--
+ALTER TABLE `commentaire_chanson`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT pour la table `commentaire_forum`
+--
+ALTER TABLE `commentaire_forum`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT pour la table `genre_chanson`
+--
+ALTER TABLE `genre_chanson`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT pour la table `membre`
+--
+ALTER TABLE `membre`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT pour la table `niveau_chanson`
+--
+ALTER TABLE `niveau_chanson`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT pour la table `sujet`
+--
+ALTER TABLE `sujet`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `chanson`
+--
+ALTER TABLE `chanson`
+ADD CONSTRAINT `chanson_ibfk_3` FOREIGN KEY (`id_membre`) REFERENCES `membre` (`id`),
+ADD CONSTRAINT `chanson_ibfk_1` FOREIGN KEY (`id_niveau`) REFERENCES `niveau_chanson` (`id`),
+ADD CONSTRAINT `chanson_ibfk_2` FOREIGN KEY (`id_genre`) REFERENCES `genre_chanson` (`id`);
+
+--
+-- Contraintes pour la table `chanson_par_categorie`
+--
+ALTER TABLE `chanson_par_categorie`
+ADD CONSTRAINT `chanson_par_categorie_ibfk_2` FOREIGN KEY (`id_chanson`) REFERENCES `chanson` (`id`),
+ADD CONSTRAINT `chanson_par_categorie_ibfk_1` FOREIGN KEY (`id_categorie`) REFERENCES `categorie_chanson` (`id`);
+
+--
+-- Contraintes pour la table `commentaire_chanson`
+--
+ALTER TABLE `commentaire_chanson`
+ADD CONSTRAINT `commentaire_chanson_ibfk_2` FOREIGN KEY (`id_chanson`) REFERENCES `chanson` (`id`),
+ADD CONSTRAINT `commentaire_chanson_ibfk_1` FOREIGN KEY (`id_membre`) REFERENCES `membre` (`id`);
+
+--
+-- Contraintes pour la table `commentaire_forum`
+--
+ALTER TABLE `commentaire_forum`
+ADD CONSTRAINT `commentaire_forum_ibfk_2` FOREIGN KEY (`id_sujet`) REFERENCES `sujet` (`id`),
+ADD CONSTRAINT `commentaire_forum_ibfk_1` FOREIGN KEY (`id_membre`) REFERENCES `membre` (`id`);
+
+--
+-- Contraintes pour la table `sujet`
+--
+ALTER TABLE `sujet`
+ADD CONSTRAINT `sujet_ibfk_2` FOREIGN KEY (`id_categorie`) REFERENCES `categorie_forum` (`id`),
+ADD CONSTRAINT `sujet_ibfk_1` FOREIGN KEY (`id_membre`) REFERENCES `membre` (`id`);

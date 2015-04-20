@@ -18,18 +18,20 @@
 			$sujet = $_GET['id_sujet'];
 	 	}
 
-		$requete="SELECT * FROM commentaire_forum WHERE id_sujet=$sujet";
+		$requete="SELECT * FROM membre JOIN commentaire_forum 
+				  WHERE membre.id=commentaire_forum.id_membre AND commentaire_forum.id_sujet=$sujet";
 		$response = $pdo->prepare($requete);
 		$response->execute();
 
 		$commentaires = $response->fetchAll();
 
-		$requete2="SELECT titre FROM sujet WHERE id=$sujet";
-		$response2 = $pdo->prepare($requete2);
-		$response2->execute();
+		$requete2="SELECT * FROM sujet WHERE id=$sujet";
+		$reponse2 = $pdo->prepare($requete2);
+		$reponse2->execute();
 
-		$sujet_titre = $response2->fetchAll();
+		$sujet_titre = $reponse2->fetchAll();
 
+		
 	} 
 	else {
 		header('Location: http://localhost:8888/lessong/forum.php');   // Diriger l'utilisateur vers la page de connexion

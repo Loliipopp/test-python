@@ -12,12 +12,6 @@
 
 
 <?php include("entete.php"); ?>
-
-	<div class="jumbotron">
-      <div class="container">
-      </div>
-    </div>
-
 	<div class="container">
       <div class="row">
 		<!-- sidebar -->
@@ -25,18 +19,18 @@
 		  <div data-spy="affix" data-offset-top="45" data-offset-bottom="90">
 		    <div class="well"> <!-- encadrement -->
 			  <ul class="nav" id="sidebar-nav">
-				<li><strong>Afficher des chansons françaises par</strong></li>
+				<li><strong>Afficher des chansons par</strong></li>
 				<li><form action="accueil.php" method="get">
-					<button class='btn btn-info' type='submit' name='champ' value='niveau'> Niveau </button>
+					<button class='btn btn-primary btn-style' type='submit' name='champ' value='niveau'> Niveau </button>
 				</form></li>
 				<li><form action="accueil.php" method="get">
-					<button class='btn btn-info' type='submit' name='champ' value='categories'> Catégories </button>
+					<button class='btn btn-primary btn-style' type='submit' name='champ' value='categories'> Catégories </button>
 				</form></li>
 				<li><form action="accueil.php" method="get">
-					<button class='btn btn-info' type='submit' name='champ' value='style'> Style de Musique </button>
+					<button class='btn btn-primary btn-style' type='submit' name='champ' value='style'> Style de Musique </button>
 				</form></li>
 				<li><form action="accueil.php" method="get">
-					<button class='btn btn-info' type='submit' name='champ' value='toutes'> Toutes </button>
+					<button class='btn btn-primary btn-style' type='submit' name='champ' value='toutes'> Toutes </button>
 				</form></li>
 		      </ul>
 			</div>
@@ -55,7 +49,7 @@
 	<div class='page-soumettre'>
 		<a href='soumettre-chanson.php'><button class='btn btn-info'> Soumettre une Chanson </button></a>
 	</div>
-
+	<hr>
 	<?php 
 		if ($_GET['champ'] == 'niveau' || $_GET['champ'] == 'niveau_chanson') {
 			echo "<form method='get' action='accueil.php'>";
@@ -79,7 +73,8 @@
 			echo "</form>";
 		}		
 		if (count($chansons)) {
-		echo "<div class='resultats'> 
+		echo "<hr><div class='resultats'> 
+				<h4> Vos résultats: </h4>
 				<table class=' table table-condensed table-bordered table-hover table-striped sortable'>
 					<tr>
 						<th></th>
@@ -90,30 +85,29 @@
 					</tr>";
 			for ($i=0; $i<count($chansons); $i++) {
 				echo "<tr>
-						<td> <form action='chanson.php' method='get'>
+						<td class='icon'> <form action='chanson.php' method='get'>
 							<input type='hidden' name='id_chanson' value='".$chansons[$i]['id']."'/>
 							<button type='submit'><span class='glyphicon glyphicon-headphones' aria-hidden='true'></span></button>
 						</form>
 						</td>  
 						<td>".$chansons[$i]['titre']."</td>
 						<td>".$chansons[$i]['interprete']."</td>
-						<td>".$chansons[$i]['id_niveau']."</td>
-						<td>".$chansons[$i]['id_genre']."</td> 
+						<td>".$chansons[$i]['nivTexte']."</td>
+						<td>".$chansons[$i]['genTexte']."</td> 
 
 				  </tr> ";
 			}		
 		echo "</table>
-			</div> ";
+			</div><hr> ";
 		}
 		else {
-
-			echo "<h5> Veuillez essayer à nouveau! </h5>";
+			echo "<h5>  Recherchez des chansons francaises selon vos préférences! </h5> <hr>";
 		}
 	?>
 
 	<!-- Afficher les dernières chasons publiées -->
 	<div class="favoris">
-			<h4> Dernières ajoutées </h4> 
+			<h4> Dernières chansons ajoutées </h4> 
 		<table class="table-condensed table-bordered table-hover table-striped table sortable">
 			<tr>
 				<th> </th>
@@ -125,15 +119,15 @@
 			<?php
 				for ($i = count($chansonsRecentes)-1; $i >= 0; $i--) {
 					echo "<tr>
-							<td> <form action='chanson.php' method='get'>
+							<td class='icon'> <form action='chanson.php' method='get'>
 									<input type='hidden' name='id_chanson' value='".$chansonsRecentes[$i]['id']."'/>
 									<button type='submit'><span class='glyphicon glyphicon-headphones' aria-hidden='true'></span></button>
 								</form>
 							</td> 
 							<td>".$chansonsRecentes[$i]['titre']."</td>
 							<td>".$chansonsRecentes[$i]['interprete']."</td>
-							<td>".$chansonsRecentes[$i]['id_niveau']."</td>
-							<td>".$chansonsRecentes[$i]['id_genre']."</td> 
+							<td>".$chansonsRecentes[$i]['nivTexte']."</td>
+							<td>".$chansonsRecentes[$i]['genTexte']."</td> 
 						  </tr>";
 				}
 			?>

@@ -1,3 +1,25 @@
 .jumbotron{
 	background-image: url(../images/fond-geom2.jpg);
 }
+
+.btn-special {
+	width: 200px;
+}
+
+.well {
+	text-align: center;
+}
+
+
+body {
+	text-align: center;
+	min-width: 600px;
+}
+
+.boite-centrale {
+	width: 700px;
+	display: inline-block;
+	text-align: left;
+	border-radius: 30px;
+	padding: 20px;
+}

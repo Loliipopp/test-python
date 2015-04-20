@@ -3,6 +3,10 @@ body {
 	min-width: 600px;
 }
 
+h1 {
+	text-align: center;
+}
+
 .boite-centrale {
 	width: 700px;
 	display: inline-block;
@@ -11,14 +15,6 @@ body {
 	padding: 20px;
 }
 
-button {
-	display: inline-block;
-}
-
 .jumbotron{
 	background-image: url(../images/fond-geom1.jpg);
-}
-
-.btn-style{
-	width: 125px;
 }

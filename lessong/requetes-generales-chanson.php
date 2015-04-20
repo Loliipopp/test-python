@@ -8,7 +8,6 @@
 
 	$niveaux = $response->fetchAll();
 
-
     /**
      * Attraper toutes les catégories
      */
